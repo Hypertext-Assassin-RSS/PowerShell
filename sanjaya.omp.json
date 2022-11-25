@@ -6,13 +6,30 @@
       "type": "prompt",
       "alignment": "left",
       "segments": [
+        // {
+        //   "type": "os",
+        //   "style": "diamond",
+        //   "background": "#575656",
+        //   "foreground": "#D6DEEB",
+        //   "leading_diamond": "\u256d\u2500\ue0b6",
+        //   "template": "\ue70f "
+        // },
         {
-          "type": "shell",
+          "type": "session",
           "style": "diamond",
           "foreground": "#ffffff",
-          "background": "#0077c2",
+          "background": "#7621de",
           "leading_diamond": "\u256d\u2500\ue0b6",
           "template": " {{ .UserName }} "
+        },
+        {
+          "type": "shell",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#ffffff",
+          "background": "#00c7fc",
+          "leading_diamond": "",
+          "template": " \uf489  {{ .Name }} "
         },
         {
           "type": "root",
@@ -30,7 +47,7 @@
           "powerline_symbol": "\ue0b0",
           "foreground": "#E4E4E4",
           "background": "#444444",
-          "template": " {{ .Path }} ",
+          "template": " \uf74a {{ .Path }} ",
           "properties": {
             "style": "full"
           }
@@ -79,7 +96,7 @@
           "style": "diamond",
           "invert_powerline": true,
           "foreground": "#ffffff",
-          "background": "#40c4ff",
+          "background": "#F0B57B",
           "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
           "template": " \uf5ef {{ .CurrentDate | date .Format }} "
